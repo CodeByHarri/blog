@@ -78,7 +78,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      9 min read
+      1 min read
     
 </span></p>
 
@@ -118,14 +118,7 @@ window.onload = wrap_img;
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>make a retangle box with aud value the size and the colour varies based on the %</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="A-treemap-of-the-%-change-of-holdings-within-the-ETFs-I-hold">A treemap of the % change of holdings within the ETFs I hold<a class="anchor-link" href="#A-treemap-of-the-%-change-of-holdings-within-the-ETFs-I-hold"> </a></h1><p>The idea was to explore how the underlying holdings of these ETFs changed and it's effects on the value of my portfolio.</p>
+<h2 id="A-treemap-of-the-%-change-of-holdings-within-the-ETFs-I-hold">A treemap of the % change of holdings within the ETFs I hold<a class="anchor-link" href="#A-treemap-of-the-%-change-of-holdings-within-the-ETFs-I-hold"> </a></h2><p>The idea was to explore how the underlying holdings of these ETFs changed and it's effects on the value of my portfolio.</p>
 
 </div>
 </div>
@@ -207,1709 +200,12 @@ if (outputEl) {{
 </div>
     
 
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ndq</span> <span class="o">=</span> <span class="n">ndq</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Weight (%)&quot;</span><span class="p">:</span> <span class="s2">&quot;ETF Weight (%)&quot;</span><span class="p">})</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Total weighted sentiment:&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">((</span><span class="n">ndq</span><span class="p">[</span><span class="s1">&#39;ETF Weight (%)&#39;</span><span class="p">]</span><span class="o">*</span><span class="n">ndq</span><span class="p">[</span><span class="s1">&#39;Sentiment Score&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span><span class="mi">2</span><span class="p">))</span>
-<span class="n">ndq</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">format</span><span class="p">({</span><span class="s1">&#39;Sentiment Score&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">{:.2f}</span><span class="s1">&#39;</span><span class="p">,</span>
-                                <span class="s1">&#39;ETF Weight (%)&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">{:.3f}</span><span class="s1">&#39;</span><span class="p">,</span>
-                                          <span class="s1">&#39;% Change&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">{:.2f}</span><span class="s1">&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">background_gradient</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Sentiment Score&#39;</span><span class="p">,</span><span class="s1">&#39;% Change&#39;</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Reds&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Total weighted sentiment: 0.08
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<style type="text/css">
-#T_77af5304_da4b_11eb_8f69_0242ac1c0002row0_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row42_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row80_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row87_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row101_col5{
-            background-color:  #f7593f;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row0_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row2_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row17_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row47_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row55_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row74_col5{
-            background-color:  #fb7252;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row1_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row36_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row37_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row44_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row69_col5{
-            background-color:  #fb7151;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row1_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row87_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row90_col9{
-            background-color:  #f44d38;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row2_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row38_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row40_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row51_col9{
-            background-color:  #fa6849;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row3_col5{
-            background-color:  #fc9272;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row3_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row21_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row61_col9{
-            background-color:  #f6553c;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row4_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row62_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row65_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row89_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row99_col5{
-            background-color:  #fb7d5d;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row4_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row81_col5{
-            background-color:  #fc9576;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row5_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row7_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row15_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row29_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row67_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row72_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row91_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row97_col5{
-            background-color:  #fb7050;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row5_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row96_col9{
-            background-color:  #fb7b5b;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row6_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row16_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row26_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row31_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row98_col9{
-            background-color:  #fb6e4e;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row6_col9{
-            background-color:  #f14130;
-            color:  #f1f1f1;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row7_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row50_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row81_col9{
-            background-color:  #fc9c7d;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row8_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row23_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row64_col9{
-            background-color:  #fb7858;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row8_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row71_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row84_col5{
-            background-color:  #ef3c2c;
-            color:  #f1f1f1;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row9_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row47_col5{
-            background-color:  #fc8767;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row9_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row51_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row82_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row94_col9{
-            background-color:  #fb6b4b;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row10_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row14_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row52_col9{
-            background-color:  #f34a36;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row10_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row19_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row73_col9{
-            background-color:  #fb7c5c;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row11_col5{
-            background-color:  #fc8b6b;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row11_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row41_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row92_col5{
-            background-color:  #fc8969;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row12_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row55_col9{
-            background-color:  #fc8e6e;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row12_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row75_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row83_col5{
-            background-color:  #fc8f6f;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row13_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row32_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row50_col5{
-            background-color:  #fa6547;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row13_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row35_col5{
-            background-color:  #fca082;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row14_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row62_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row83_col9{
-            background-color:  #f0402f;
-            color:  #f1f1f1;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row15_col5{
-            background-color:  #fb6d4d;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row16_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row66_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row100_col5{
-            background-color:  #f34c37;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row17_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row53_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row54_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row71_col5{
-            background-color:  #fb7555;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row18_col5{
-            background-color:  #fc8464;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row18_col9{
-            background-color:  #fc9070;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row19_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row28_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row73_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row89_col5{
-            background-color:  #f96245;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row20_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row33_col9{
-            background-color:  #f6563d;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row20_col9{
-            background-color:  #fcb89e;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row21_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row68_col9{
-            background-color:  #fc8d6d;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row22_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row43_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row95_col5{
-            background-color:  #fb7353;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row22_col9{
-            background-color:  #d42121;
-            color:  #f1f1f1;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row23_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row48_col5{
-            background-color:  #fca689;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row24_col5{
-            background-color:  #f85d42;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row24_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row57_col5{
-            background-color:  #fb7757;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row25_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row72_col9{
-            background-color:  #67000d;
-            color:  #f1f1f1;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row25_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row63_col5{
-            background-color:  #e83429;
-            color:  #f1f1f1;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row26_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row79_col5{
-            background-color:  #fdc5ae;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row27_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row49_col5{
-            background-color:  #cb181d;
-            color:  #f1f1f1;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row27_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row82_col5{
-            background-color:  #f75b40;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row28_col9{
-            background-color:  #fcaa8d;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row29_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row38_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row78_col5{
-            background-color:  #f96044;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row30_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row41_col5{
-            background-color:  #fcab8f;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row30_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row46_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row64_col5{
-            background-color:  #fc8060;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row31_col5{
-            background-color:  #f44f39;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row32_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row91_col9{
-            background-color:  #db2824;
-            color:  #f1f1f1;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row33_col5{
-            background-color:  #eb372a;
-            color:  #f1f1f1;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row34_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row52_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row94_col5{
-            background-color:  #f6583e;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row34_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row60_col5{
-            background-color:  #f03d2d;
-            color:  #f1f1f1;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row35_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row56_col5{
-            background-color:  #fff5f0;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row36_col9{
-            background-color:  #fc997a;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row37_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row70_col9{
-            background-color:  #e32f27;
-            color:  #f1f1f1;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row39_col5{
-            background-color:  #fc9373;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row39_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row61_col5{
-            background-color:  #fdd0bc;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row40_col9{
-            background-color:  #fc8666;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row42_col9{
-            background-color:  #d92523;
-            color:  #f1f1f1;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row43_col5{
-            background-color:  #d01d1f;
-            color:  #f1f1f1;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row44_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row93_col5{
-            background-color:  #fc8a6a;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row45_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row57_col9{
-            background-color:  #fca78b;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row45_col9{
-            background-color:  #fa6648;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row46_col5{
-            background-color:  #fca486;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row48_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row58_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row77_col9{
-            background-color:  #ee3a2c;
-            color:  #f1f1f1;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row49_col9{
-            background-color:  #fc9879;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row53_col9{
-            background-color:  #c8171c;
-            color:  #f1f1f1;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row54_col9{
-            background-color:  #ce1a1e;
-            color:  #f1f1f1;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row56_col9{
-            background-color:  #fca588;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row58_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row95_col9{
-            background-color:  #fc8262;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row59_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row88_col5{
-            background-color:  #fb7a5a;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row59_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row85_col5{
-            background-color:  #fc9777;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row60_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row69_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row90_col5{
-            background-color:  #f75c41;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row63_col9{
-            background-color:  #e53228;
-            color:  #f1f1f1;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row65_col9{
-            background-color:  #b61319;
-            color:  #f1f1f1;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row66_col9{
-            background-color:  #a81016;
-            color:  #f1f1f1;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row67_col9{
-            background-color:  #cc191e;
-            color:  #f1f1f1;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row68_col5,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row96_col5{
-            background-color:  #fb694a;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row70_col5{
-            background-color:  #fcae92;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row74_col9{
-            background-color:  #be151a;
-            color:  #f1f1f1;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row75_col9,#T_77af5304_da4b_11eb_8f69_0242ac1c0002row78_col9{
-            background-color:  #d21f20;
-            color:  #f1f1f1;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row76_col5{
-            background-color:  #fca183;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row76_col9{
-            background-color:  #b81419;
-            color:  #f1f1f1;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row77_col5{
-            background-color:  #a60f15;
-            color:  #f1f1f1;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row79_col9{
-            background-color:  #f4503a;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row80_col9{
-            background-color:  #ec382b;
-            color:  #f1f1f1;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row84_col9{
-            background-color:  #fca98c;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row85_col9{
-            background-color:  #fedbcc;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row86_col5{
-            background-color:  #fc9d7f;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row86_col9{
-            background-color:  #f24633;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row88_col9{
-            background-color:  #ffebe2;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row92_col9{
-            background-color:  #e12d26;
-            color:  #f1f1f1;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row93_col9{
-            background-color:  #b21218;
-            color:  #f1f1f1;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row97_col9{
-            background-color:  #e63328;
-            color:  #f1f1f1;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row98_col5{
-            background-color:  #fc8161;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row99_col9{
-            background-color:  #d52221;
-            color:  #f1f1f1;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row100_col9{
-            background-color:  #f24734;
-            color:  #000000;
-        }#T_77af5304_da4b_11eb_8f69_0242ac1c0002row101_col9{
-            background-color:  #f14432;
-            color:  #f1f1f1;
-        }</style><table id="T_77af5304_da4b_11eb_8f69_0242ac1c0002"><thead>    <tr>        <th class="blank level0"></th>        <th class="col_heading level0 col0">Ticker</th>        <th class="col_heading level0 col1">Name</th>        <th class="col_heading level0 col2">Sector</th>        <th class="col_heading level0 col3">Currency</th>        <th class="col_heading level0 col4">ETF Weight (%)</th>        <th class="col_heading level0 col5">% Change</th>        <th class="col_heading level0 col6">ETF</th>        <th class="col_heading level0 col7">AUD holding</th>        <th class="col_heading level0 col8">Total Weight (%)</th>        <th class="col_heading level0 col9">Sentiment Score</th>    </tr></thead><tbody>
-                <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row0" class="row_heading level0 row0">0</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row0_col0" class="data row0 col0">AAPL</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row0_col1" class="data row0 col1">APPLE INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row0_col2" class="data row0 col2">Information Technology</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row0_col3" class="data row0 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row0_col4" class="data row0 col4">0.110</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row0_col5" class="data row0 col5">0.46</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row0_col6" class="data row0 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row0_col7" class="data row0 col7">647.187310</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row0_col8" class="data row0 col8">4.620000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row0_col9" class="data row0 col9">0.07</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row1" class="row_heading level0 row1">1</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row1_col0" class="data row1 col0">MSFT</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row1_col1" class="data row1 col1">MICROSOFT CORP</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row1_col2" class="data row1 col2">Information Technology</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row1_col3" class="data row1 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row1_col4" class="data row1 col4">0.098</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row1_col5" class="data row1 col5">-0.18</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row1_col6" class="data row1 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row1_col7" class="data row1 col7">577.744210</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row1_col8" class="data row1 col8">4.130000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row1_col9" class="data row1 col9">0.11</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row2" class="row_heading level0 row2">2</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row2_col0" class="data row2 col0">AMZN</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row2_col1" class="data row2 col1">AMAZON.COM INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row2_col2" class="data row2 col2">Consumer Discretionary</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row2_col3" class="data row2 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row2_col4" class="data row2 col4">0.083</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row2_col5" class="data row2 col5">-0.23</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row2_col6" class="data row2 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row2_col7" class="data row2 col7">491.279010</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row2_col8" class="data row2 col8">3.510000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row2_col9" class="data row2 col9">0.08</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row3" class="row_heading level0 row3">3</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row3_col0" class="data row3 col0">FB</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row3_col1" class="data row3 col1">FACEBOOK INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row3_col2" class="data row3 col2">Communication Services</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row3_col3" class="data row3 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row3_col4" class="data row3 col4">0.040</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row3_col5" class="data row3 col5">-1.19</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row3_col6" class="data row3 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row3_col7" class="data row3 col7">235.912170</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row3_col8" class="data row3 col8">1.680000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row3_col9" class="data row3 col9">0.10</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row4" class="row_heading level0 row4">4</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row4_col0" class="data row4 col0">GOOG</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row4_col1" class="data row4 col1">ALPHABET INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row4_col2" class="data row4 col2">Communication Services</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row4_col3" class="data row4 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row4_col4" class="data row4 col4">0.039</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row4_col5" class="data row4 col5">-0.56</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row4_col6" class="data row4 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row4_col7" class="data row4 col7">229.645210</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row4_col8" class="data row4 col8">1.640000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row4_col9" class="data row4 col9">0.02</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row5" class="row_heading level0 row5">5</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row5_col0" class="data row5 col0">TSLA</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row5_col1" class="data row5 col1">TESLA INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row5_col2" class="data row5 col2">Consumer Discretionary</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row5_col3" class="data row5 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row5_col4" class="data row5 col4">0.039</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row5_col5" class="data row5 col5">-0.16</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row5_col6" class="data row5 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row5_col7" class="data row5 col7">229.450840</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row5_col8" class="data row5 col8">1.640000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row5_col9" class="data row5 col9">0.06</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row6" class="row_heading level0 row6">6</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row6_col0" class="data row6 col0">NVDA</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row6_col1" class="data row6 col1">NVIDIA CORP</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row6_col2" class="data row6 col2">Information Technology</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row6_col3" class="data row6 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row6_col4" class="data row6 col4">0.036</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row6_col5" class="data row6 col5">-0.12</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row6_col6" class="data row6 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row6_col7" class="data row6 col7">214.784740</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row6_col8" class="data row6 col8">1.530000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row6_col9" class="data row6 col9">0.13</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row7" class="row_heading level0 row7">7</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row7_col0" class="data row7 col0">GOOGL</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row7_col1" class="data row7 col1">ALPHABET INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row7_col2" class="data row7 col2">Communication Services</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row7_col3" class="data row7 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row7_col4" class="data row7 col4">0.035</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row7_col5" class="data row7 col5">-0.15</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row7_col6" class="data row7 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row7_col7" class="data row7 col7">207.952340</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row7_col8" class="data row7 col8">1.490000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row7_col9" class="data row7 col9">0.01</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row8" class="row_heading level0 row8">8</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row8_col0" class="data row8 col0">PYPL</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row8_col1" class="data row8 col1">PAYPAL HOLDINGS INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row8_col2" class="data row8 col2">Information Technology</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row8_col3" class="data row8 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row8_col4" class="data row8 col4">0.025</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row8_col5" class="data row8 col5">-0.44</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row8_col6" class="data row8 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row8_col7" class="data row8 col7">147.544500</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row8_col8" class="data row8 col8">1.050000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row8_col9" class="data row8 col9">0.13</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row9" class="row_heading level0 row9">9</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row9_col0" class="data row9 col0">ADBE</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row9_col1" class="data row9 col1">ADOBE INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row9_col2" class="data row9 col2">Information Technology</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row9_col3" class="data row9 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row9_col4" class="data row9 col4">0.020</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row9_col5" class="data row9 col5">-0.86</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row9_col6" class="data row9 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row9_col7" class="data row9 col7">120.627200</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row9_col8" class="data row9 col8">0.860000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row9_col9" class="data row9 col9">0.08</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row10" class="row_heading level0 row10">10</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row10_col0" class="data row10 col0">CMCSA</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row10_col1" class="data row10 col1">COMCAST CORP</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row10_col2" class="data row10 col2">Communication Services</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row10_col3" class="data row10 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row10_col4" class="data row10 col4">0.019</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row10_col5" class="data row10 col5">0.85</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row10_col6" class="data row10 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row10_col7" class="data row10 col7">112.646250</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row10_col8" class="data row10 col8">0.800000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row10_col9" class="data row10 col9">0.05</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row11" class="row_heading level0 row11">11</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row11_col0" class="data row11 col0">NFLX</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row11_col1" class="data row11 col1">NETFLIX INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row11_col2" class="data row11 col2">Communication Services</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row11_col3" class="data row11 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row11_col4" class="data row11 col4">0.017</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row11_col5" class="data row11 col5">-0.99</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row11_col6" class="data row11 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row11_col7" class="data row11 col7">100.919260</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row11_col8" class="data row11 col8">0.720000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row11_col9" class="data row11 col9">0.04</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row12" class="row_heading level0 row12">12</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row12_col0" class="data row12 col0">INTC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row12_col1" class="data row12 col1">INTEL CORP</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row12_col2" class="data row12 col2">Information Technology</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row12_col3" class="data row12 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row12_col4" class="data row12 col4">0.017</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row12_col5" class="data row12 col5">-1.07</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row12_col6" class="data row12 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row12_col7" class="data row12 col7">97.679760</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row12_col8" class="data row12 col8">0.700000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row12_col9" class="data row12 col9">0.03</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row13" class="row_heading level0 row13">13</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row13_col0" class="data row13 col0">CSCO</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row13_col1" class="data row13 col1">CISCO SYSTEMS INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row13_col2" class="data row13 col2">Information Technology</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row13_col3" class="data row13 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row13_col4" class="data row13 col4">0.016</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row13_col5" class="data row13 col5">0.17</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row13_col6" class="data row13 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row13_col7" class="data row13 col7">96.242600</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row13_col8" class="data row13 col8">0.690000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row13_col9" class="data row13 col9">0.01</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row14" class="row_heading level0 row14">14</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row14_col0" class="data row14 col0">PEP</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row14_col1" class="data row14 col1">PEPSICO INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row14_col2" class="data row14 col2">Consumer Staples</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row14_col3" class="data row14 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row14_col4" class="data row14 col4">0.015</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row14_col5" class="data row14 col5">0.84</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row14_col6" class="data row14 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row14_col7" class="data row14 col7">88.214530</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row14_col8" class="data row14 col8">0.630000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row14_col9" class="data row14 col9">0.13</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row15" class="row_heading level0 row15">15</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row15_col0" class="data row15 col0">AVGO</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row15_col1" class="data row15 col1">BROADCOM INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row15_col2" class="data row15 col2">Information Technology</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row15_col3" class="data row15 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row15_col4" class="data row15 col4">0.014</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row15_col5" class="data row15 col5">-0.06</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row15_col6" class="data row15 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row15_col7" class="data row15 col7">83.891270</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row15_col8" class="data row15 col8">0.600000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row15_col9" class="data row15 col9">0.07</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row16" class="row_heading level0 row16">16</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row16_col0" class="data row16 col0">TMUS</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row16_col1" class="data row16 col1">T-MOBILE US INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row16_col2" class="data row16 col2">Communication Services</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row16_col3" class="data row16 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row16_col4" class="data row16 col4">0.013</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row16_col5" class="data row16 col5">-0.11</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row16_col6" class="data row16 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row16_col7" class="data row16 col7">77.812790</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row16_col8" class="data row16 col8">0.560000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row16_col9" class="data row16 col9">0.11</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row17" class="row_heading level0 row17">17</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row17_col0" class="data row17 col0">TXN</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row17_col1" class="data row17 col1">TEXAS INSTRUMENTS INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row17_col2" class="data row17 col2">Information Technology</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row17_col3" class="data row17 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row17_col4" class="data row17 col4">0.013</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row17_col5" class="data row17 col5">-0.30</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row17_col6" class="data row17 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row17_col7" class="data row17 col7">76.522880</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row17_col8" class="data row17 col8">0.550000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row17_col9" class="data row17 col9">0.07</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row18" class="row_heading level0 row18">18</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row18_col0" class="data row18 col0">COST</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row18_col1" class="data row18 col1">COSTCO WHOLESALE CORP</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row18_col2" class="data row18 col2">Consumer Staples</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row18_col3" class="data row18 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row18_col4" class="data row18 col4">0.013</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row18_col5" class="data row18 col5">-0.78</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row18_col6" class="data row18 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row18_col7" class="data row18 col7">75.450900</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row18_col8" class="data row18 col8">0.540000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row18_col9" class="data row18 col9">0.03</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row19" class="row_heading level0 row19">19</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row19_col0" class="data row19 col0">QCOM</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row19_col1" class="data row19 col1">QUALCOMM INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row19_col2" class="data row19 col2">Information Technology</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row19_col3" class="data row19 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row19_col4" class="data row19 col4">0.012</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row19_col5" class="data row19 col5">0.22</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row19_col6" class="data row19 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row19_col7" class="data row19 col7">69.472550</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row19_col8" class="data row19 col8">0.500000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row19_col9" class="data row19 col9">0.05</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row20" class="row_heading level0 row20">20</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row20_col0" class="data row20 col0">AMGN</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row20_col1" class="data row20 col1">AMGEN INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row20_col2" class="data row20 col2">Healthcare</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row20_col3" class="data row20 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row20_col4" class="data row20 col4">0.010</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row20_col5" class="data row20 col5">0.53</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row20_col6" class="data row20 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row20_col7" class="data row20 col7">60.348940</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row20_col8" class="data row20 col8">0.430000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row20_col9" class="data row20 col9">-0.03</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row21" class="row_heading level0 row21">21</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row21_col0" class="data row21 col0">CHTR</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row21_col1" class="data row21 col1">CHARTER COMMUNICATIONS INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row21_col2" class="data row21 col2">Communication Services</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row21_col3" class="data row21 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row21_col4" class="data row21 col4">0.010</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row21_col5" class="data row21 col5">0.56</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row21_col6" class="data row21 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row21_col7" class="data row21 col7">58.652620</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row21_col8" class="data row21 col8">0.420000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row21_col9" class="data row21 col9">0.03</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row22" class="row_heading level0 row22">22</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row22_col0" class="data row22 col0">INTU</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row22_col1" class="data row22 col1">INTUIT INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row22_col2" class="data row22 col2">Information Technology</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row22_col3" class="data row22 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row22_col4" class="data row22 col4">0.010</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row22_col5" class="data row22 col5">-0.25</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row22_col6" class="data row22 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row22_col7" class="data row22 col7">57.716110</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row22_col8" class="data row22 col8">0.410000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row22_col9" class="data row22 col9">0.17</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row23" class="row_heading level0 row23">23</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row23_col0" class="data row23 col0">SBUX</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row23_col1" class="data row23 col1">STARBUCKS CORP</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row23_col2" class="data row23 col2">Consumer Discretionary</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row23_col3" class="data row23 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row23_col4" class="data row23 col4">0.010</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row23_col5" class="data row23 col5">-0.41</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row23_col6" class="data row23 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row23_col7" class="data row23 col7">56.767820</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row23_col8" class="data row23 col8">0.410000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row23_col9" class="data row23 col9">-0.00</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row24" class="row_heading level0 row24">24</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row24_col0" class="data row24 col0">AMAT</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row24_col1" class="data row24 col1">APPLIED MATERIALS INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row24_col2" class="data row24 col2">Information Technology</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row24_col3" class="data row24 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row24_col4" class="data row24 col4">0.010</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row24_col5" class="data row24 col5">0.34</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row24_col6" class="data row24 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row24_col7" class="data row24 col7">56.084580</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row24_col8" class="data row24 col8">0.400000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row24_col9" class="data row24 col9">0.06</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row25" class="row_heading level0 row25">25</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row25_col0" class="data row25 col0">AMD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row25_col1" class="data row25 col1">ADVANCED MICRO DEVICES INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row25_col2" class="data row25 col2">Information Technology</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row25_col3" class="data row25 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row25_col4" class="data row25 col4">0.008</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row25_col5" class="data row25 col5">4.93</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row25_col6" class="data row25 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row25_col7" class="data row25 col7">49.175610</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row25_col8" class="data row25 col8">0.350000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row25_col9" class="data row25 col9">0.15</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row26" class="row_heading level0 row26">26</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row26_col0" class="data row26 col0">ISRG</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row26_col1" class="data row26 col1">INTUITIVE SURGICAL INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row26_col2" class="data row26 col2">Healthcare</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row26_col3" class="data row26 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row26_col4" class="data row26 col4">0.008</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row26_col5" class="data row26 col5">-0.12</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row26_col6" class="data row26 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row26_col7" class="data row26 col7">46.925630</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row26_col8" class="data row26 col8">0.340000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row26_col9" class="data row26 col9">-0.05</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row27" class="row_heading level0 row27">27</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row27_col0" class="data row27 col0">MU</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row27_col1" class="data row27 col1">MICRON TECHNOLOGY INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row27_col2" class="data row27 col2">Information Technology</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row27_col3" class="data row27 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row27_col4" class="data row27 col4">0.007</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row27_col5" class="data row27 col5">2.47</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row27_col6" class="data row27 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row27_col7" class="data row27 col7">41.065080</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row27_col8" class="data row27 col8">0.290000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row27_col9" class="data row27 col9">0.10</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row28" class="row_heading level0 row28">28</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row28_col0" class="data row28 col0">MRNA</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row28_col1" class="data row28 col1">MODERNA INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row28_col2" class="data row28 col2">Healthcare</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row28_col3" class="data row28 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row28_col4" class="data row28 col4">0.007</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row28_col5" class="data row28 col5">0.22</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row28_col6" class="data row28 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row28_col7" class="data row28 col7">40.652780</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row28_col8" class="data row28 col8">0.290000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row28_col9" class="data row28 col9">-0.01</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row29" class="row_heading level0 row29">29</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row29_col0" class="data row29 col0">LRCX</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row29_col1" class="data row29 col1">LAM RESEARCH CORP</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row29_col2" class="data row29 col2">Information Technology</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row29_col3" class="data row29 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row29_col4" class="data row29 col4">0.007</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row29_col5" class="data row29 col5">-0.17</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row29_col6" class="data row29 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row29_col7" class="data row29 col7">39.987210</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row29_col8" class="data row29 col8">0.290000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row29_col9" class="data row29 col9">0.09</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row30" class="row_heading level0 row30">30</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row30_col0" class="data row30 col0">ZM</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row30_col1" class="data row30 col1">ZOOM VIDEO COMMUNICATIONS INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row30_col2" class="data row30 col2">Information Technology</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row30_col3" class="data row30 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row30_col4" class="data row30 col4">0.007</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row30_col5" class="data row30 col5">-1.95</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row30_col6" class="data row30 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row30_col7" class="data row30 col7">39.404100</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row30_col8" class="data row30 col8">0.280000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row30_col9" class="data row30 col9">0.05</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row31" class="row_heading level0 row31">31</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row31_col0" class="data row31 col0">BKNG</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row31_col1" class="data row31 col1">BOOKING HOLDINGS INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row31_col2" class="data row31 col2">Consumer Discretionary</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row31_col3" class="data row31 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row31_col4" class="data row31 col4">0.007</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row31_col5" class="data row31 col5">0.73</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row31_col6" class="data row31 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row31_col7" class="data row31 col7">38.703190</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row31_col8" class="data row31 col8">0.280000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row31_col9" class="data row31 col9">0.07</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row32" class="row_heading level0 row32">32</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row32_col0" class="data row32 col0">MDLZ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row32_col1" class="data row32 col1">MONDELEZ INTERNATIONAL INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row32_col2" class="data row32 col2">Consumer Staples</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row32_col3" class="data row32 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row32_col4" class="data row32 col4">0.006</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row32_col5" class="data row32 col5">0.16</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row32_col6" class="data row32 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row32_col7" class="data row32 col7">37.796130</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row32_col8" class="data row32 col8">0.270000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row32_col9" class="data row32 col9">0.17</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row33" class="row_heading level0 row33">33</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row33_col0" class="data row33 col0">GILD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row33_col1" class="data row33 col1">GILEAD SCIENCES INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row33_col2" class="data row33 col2">Healthcare</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row33_col3" class="data row33 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row33_col4" class="data row33 col4">0.006</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row33_col5" class="data row33 col5">1.37</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row33_col6" class="data row33 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row33_col7" class="data row33 col7">37.213020</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row33_col8" class="data row33 col8">0.270000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row33_col9" class="data row33 col9">0.10</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row34" class="row_heading level0 row34">34</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row34_col0" class="data row34 col0">ADP</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row34_col1" class="data row34 col1">AUTOMATIC DATA PROCESSING INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row34_col2" class="data row34 col2">Information Technology</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row34_col3" class="data row34 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row34_col4" class="data row34 col4">0.006</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row34_col5" class="data row34 col5">0.51</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row34_col6" class="data row34 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row34_col7" class="data row34 col7">36.417870</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row34_col8" class="data row34 col8">0.260000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row34_col9" class="data row34 col9">0.13</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row35" class="row_heading level0 row35">35</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row35_col0" class="data row35 col0">MELI</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row35_col1" class="data row35 col1">MERCADOLIBRE INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row35_col2" class="data row35 col2">Consumer Discretionary</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row35_col3" class="data row35 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row35_col4" class="data row35 col4">0.006</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row35_col5" class="data row35 col5">-1.59</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row35_col6" class="data row35 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row35_col7" class="data row35 col7">33.466980</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row35_col8" class="data row35 col8">0.240000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row35_col9" class="data row35 col9">-0.14</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row36" class="row_heading level0 row36">36</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row36_col0" class="data row36 col0">ATVI</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row36_col1" class="data row36 col1">ACTIVISION BLIZZARD INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row36_col2" class="data row36 col2">Communication Services</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row36_col3" class="data row36 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row36_col4" class="data row36 col4">0.005</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row36_col5" class="data row36 col5">-0.18</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row36_col6" class="data row36 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row36_col7" class="data row36 col7">31.953250</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row36_col8" class="data row36 col8">0.230000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row36_col9" class="data row36 col9">0.01</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row37" class="row_heading level0 row37">37</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row37_col0" class="data row37 col0">CSX</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row37_col1" class="data row37 col1">CSX CORP</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row37_col2" class="data row37 col2">Industrials</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row37_col3" class="data row37 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row37_col4" class="data row37 col4">0.005</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row37_col5" class="data row37 col5">1.65</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row37_col6" class="data row37 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row37_col7" class="data row37 col7">31.411370</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row37_col8" class="data row37 col8">0.220000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row37_col9" class="data row37 col9">0.07</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row38" class="row_heading level0 row38">38</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row38_col0" class="data row38 col0">FISV</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row38_col1" class="data row38 col1">FISERV INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row38_col2" class="data row38 col2">Information Technology</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row38_col3" class="data row38 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row38_col4" class="data row38 col4">0.005</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row38_col5" class="data row38 col5">0.28</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row38_col6" class="data row38 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row38_col7" class="data row38 col7">30.710460</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row38_col8" class="data row38 col8">0.220000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row38_col9" class="data row38 col9">0.08</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row39" class="row_heading level0 row39">39</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row39_col0" class="data row39 col0">ILMN</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row39_col1" class="data row39 col1">ILLUMINA INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row39_col2" class="data row39 col2">Healthcare</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row39_col3" class="data row39 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row39_col4" class="data row39 col4">0.005</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row39_col5" class="data row39 col5">-1.25</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row39_col6" class="data row39 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row39_col7" class="data row39 col7">29.768060</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row39_col8" class="data row39 col8">0.210000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row39_col9" class="data row39 col9">-0.06</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row40" class="row_heading level0 row40">40</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row40_col0" class="data row40 col0">JD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row40_col1" class="data row40 col1">JD.COM INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row40_col2" class="data row40 col2">Consumer Discretionary</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row40_col3" class="data row40 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row40_col4" class="data row40 col4">0.005</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row40_col5" class="data row40 col5">0.08</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row40_col6" class="data row40 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row40_col7" class="data row40 col7">27.712450</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row40_col8" class="data row40 col8">0.200000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row40_col9" class="data row40 col9">0.04</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row41" class="row_heading level0 row41">41</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row41_col0" class="data row41 col0">ADSK</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row41_col1" class="data row41 col1">AUTODESK INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row41_col2" class="data row41 col2">Information Technology</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row41_col3" class="data row41 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row41_col4" class="data row41 col4">0.005</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row41_col5" class="data row41 col5">-1.96</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row41_col6" class="data row41 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row41_col7" class="data row41 col7">27.677110</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row41_col8" class="data row41 col8">0.200000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row41_col9" class="data row41 col9">0.04</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row42" class="row_heading level0 row42">42</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row42_col0" class="data row42 col0">ADI</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row42_col1" class="data row42 col1">ANALOG DEVICES INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row42_col2" class="data row42 col2">Information Technology</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row42_col3" class="data row42 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row42_col4" class="data row42 col4">0.005</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row42_col5" class="data row42 col5">0.44</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row42_col6" class="data row42 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row42_col7" class="data row42 col7">27.359050</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row42_col8" class="data row42 col8">0.200000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row42_col9" class="data row42 col9">0.17</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row43" class="row_heading level0 row43">43</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row43_col0" class="data row43 col0">REGN</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row43_col1" class="data row43 col1">REGENERON PHARMACEUTICALS INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row43_col2" class="data row43 col2">Healthcare</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row43_col3" class="data row43 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row43_col4" class="data row43 col4">0.004</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row43_col5" class="data row43 col5">2.30</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row43_col6" class="data row43 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row43_col7" class="data row43 col7">25.197420</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row43_col8" class="data row43 col8">0.180000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row43_col9" class="data row43 col9">0.07</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row44" class="row_heading level0 row44">44</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row44_col0" class="data row44 col0">NXPI</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row44_col1" class="data row44 col1">NXP SEMICONDUCTORS NV</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row44_col2" class="data row44 col2">Information Technology</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row44_col3" class="data row44 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row44_col4" class="data row44 col4">0.004</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row44_col5" class="data row44 col5">-0.95</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row44_col6" class="data row44 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row44_col7" class="data row44 col7">24.443500</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row44_col8" class="data row44 col8">0.170000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row44_col9" class="data row44 col9">0.07</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row45" class="row_heading level0 row45">45</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row45_col0" class="data row45 col0">ASML</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row45_col1" class="data row45 col1">ASML HOLDING NV</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row45_col2" class="data row45 col2">Information Technology</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row45_col3" class="data row45 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row45_col4" class="data row45 col4">0.004</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row45_col5" class="data row45 col5">-1.82</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row45_col6" class="data row45 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row45_col7" class="data row45 col7">23.654240</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row45_col8" class="data row45 col8">0.170000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row45_col9" class="data row45 col9">0.08</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row46" class="row_heading level0 row46">46</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row46_col0" class="data row46 col0">DOCU</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row46_col1" class="data row46 col1">DOCUSIGN INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row46_col2" class="data row46 col2">Information Technology</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row46_col3" class="data row46 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row46_col4" class="data row46 col4">0.004</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row46_col5" class="data row46 col5">-1.73</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row46_col6" class="data row46 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row46_col7" class="data row46 col7">23.436310</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row46_col8" class="data row46 col8">0.170000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row46_col9" class="data row46 col9">0.05</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row47" class="row_heading level0 row47">47</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row47_col0" class="data row47 col0">IDXX</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row47_col1" class="data row47 col1">IDEXX LABORATORIES INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row47_col2" class="data row47 col2">Healthcare</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row47_col3" class="data row47 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row47_col4" class="data row47 col4">0.004</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row47_col5" class="data row47 col5">-0.87</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row47_col6" class="data row47 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row47_col7" class="data row47 col7">23.206600</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row47_col8" class="data row47 col8">0.170000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row47_col9" class="data row47 col9">0.07</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row48" class="row_heading level0 row48">48</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row48_col0" class="data row48 col0">BIDU</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row48_col1" class="data row48 col1">BAIDU INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row48_col2" class="data row48 col2">Communication Services</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row48_col3" class="data row48 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row48_col4" class="data row48 col4">0.004</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row48_col5" class="data row48 col5">-1.82</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row48_col6" class="data row48 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row48_col7" class="data row48 col7">22.764850</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row48_col8" class="data row48 col8">0.160000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row48_col9" class="data row48 col9">0.14</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row49" class="row_heading level0 row49">49</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row49_col0" class="data row49 col0">VRTX</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row49_col1" class="data row49 col1">VERTEX PHARMACEUTICALS INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row49_col2" class="data row49 col2">Healthcare</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row49_col3" class="data row49 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row49_col4" class="data row49 col4">0.004</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row49_col5" class="data row49 col5">2.46</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row49_col6" class="data row49 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row49_col7" class="data row49 col7">22.488020</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row49_col8" class="data row49 col8">0.160000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row49_col9" class="data row49 col9">0.01</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row50" class="row_heading level0 row50">50</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row50_col0" class="data row50 col0">BIIB</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row50_col1" class="data row50 col1">BIOGEN INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row50_col2" class="data row50 col2">Healthcare</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row50_col3" class="data row50 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row50_col4" class="data row50 col4">0.004</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row50_col5" class="data row50 col5">0.16</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row50_col6" class="data row50 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row50_col7" class="data row50 col7">22.464460</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row50_col8" class="data row50 col8">0.160000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row50_col9" class="data row50 col9">0.01</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row51" class="row_heading level0 row51">51</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row51_col0" class="data row51 col0">KDP</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row51_col1" class="data row51 col1">KEURIG DR PEPPER INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row51_col2" class="data row51 col2">nan</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row51_col3" class="data row51 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row51_col4" class="data row51 col4">0.004</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row51_col5" class="data row51 col5">0.00</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row51_col6" class="data row51 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row51_col7" class="data row51 col7">21.522060</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row51_col8" class="data row51 col8">0.150000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row51_col9" class="data row51 col9">0.08</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row52" class="row_heading level0 row52">52</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row52_col0" class="data row52 col0">KHC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row52_col1" class="data row52 col1">KRAFT HEINZ CO/THE</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row52_col2" class="data row52 col2">Consumer Staples</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row52_col3" class="data row52 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row52_col4" class="data row52 col4">0.004</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row52_col5" class="data row52 col5">0.49</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row52_col6" class="data row52 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row52_col7" class="data row52 col7">21.486720</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row52_col8" class="data row52 col8">0.150000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row52_col9" class="data row52 col9">0.12</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row53" class="row_heading level0 row53">53</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row53_col0" class="data row53 col0">KLAC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row53_col1" class="data row53 col1">KLA CORP</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row53_col2" class="data row53 col2">Information Technology</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row53_col3" class="data row53 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row53_col4" class="data row53 col4">0.004</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row53_col5" class="data row53 col5">-0.30</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row53_col6" class="data row53 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row53_col7" class="data row53 col7">21.416040</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row53_col8" class="data row53 col8">0.150000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row53_col9" class="data row53 col9">0.19</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row54" class="row_heading level0 row54">54</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row54_col0" class="data row54 col0">ALGN</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row54_col1" class="data row54 col1">ALIGN TECHNOLOGY INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row54_col2" class="data row54 col2">Healthcare</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row54_col3" class="data row54 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row54_col4" class="data row54 col4">0.004</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row54_col5" class="data row54 col5">-0.29</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row54_col6" class="data row54 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row54_col7" class="data row54 col7">20.832930</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row54_col8" class="data row54 col8">0.150000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row54_col9" class="data row54 col9">0.19</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row55" class="row_heading level0 row55">55</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row55_col0" class="data row55 col0">MNST</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row55_col1" class="data row55 col1">MONSTER BEVERAGE CORP</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row55_col2" class="data row55 col2">Consumer Staples</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row55_col3" class="data row55 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row55_col4" class="data row55 col4">0.004</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row55_col5" class="data row55 col5">-0.23</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row55_col6" class="data row55 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row55_col7" class="data row55 col7">20.803480</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row55_col8" class="data row55 col8">0.150000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row55_col9" class="data row55 col9">0.03</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row56" class="row_heading level0 row56">56</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row56_col0" class="data row56 col0">PDD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row56_col1" class="data row56 col1">PINDUODUO INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row56_col2" class="data row56 col2">Consumer Discretionary</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row56_col3" class="data row56 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row56_col4" class="data row56 col4">0.004</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row56_col5" class="data row56 col5">-4.89</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row56_col6" class="data row56 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row56_col7" class="data row56 col7">20.709240</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row56_col8" class="data row56 col8">0.150000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row56_col9" class="data row56 col9">-0.00</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row57" class="row_heading level0 row57">57</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row57_col0" class="data row57 col0">EBAY</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row57_col1" class="data row57 col1">EBAY INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row57_col2" class="data row57 col2">Consumer Discretionary</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row57_col3" class="data row57 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row57_col4" class="data row57 col4">0.003</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row57_col5" class="data row57 col5">-0.40</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row57_col6" class="data row57 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row57_col7" class="data row57 col7">20.609110</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row57_col8" class="data row57 col8">0.150000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row57_col9" class="data row57 col9">-0.01</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row58" class="row_heading level0 row58">58</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row58_col0" class="data row58 col0">MRVL</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row58_col1" class="data row58 col1">MARVELL TECHNOLOGY INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row58_col2" class="data row58 col2">Information Technology</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row58_col3" class="data row58 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row58_col4" class="data row58 col4">0.003</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row58_col5" class="data row58 col5">-0.73</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row58_col6" class="data row58 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row58_col7" class="data row58 col7">20.591440</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row58_col8" class="data row58 col8">0.150000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row58_col9" class="data row58 col9">0.13</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row59" class="row_heading level0 row59">59</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row59_col0" class="data row59 col0">LULU</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row59_col1" class="data row59 col1">LULULEMON ATHLETICA INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row59_col2" class="data row59 col2">Consumer Discretionary</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row59_col3" class="data row59 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row59_col4" class="data row59 col4">0.003</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row59_col5" class="data row59 col5">-0.46</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row59_col6" class="data row59 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row59_col7" class="data row59 col7">19.666710</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row59_col8" class="data row59 col8">0.140000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row59_col9" class="data row59 col9">0.02</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row60" class="row_heading level0 row60">60</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row60_col0" class="data row60 col0">WBA</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row60_col1" class="data row60 col1">WALGREENS BOOTS ALLIANCE INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row60_col2" class="data row60 col2">Consumer Staples</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row60_col3" class="data row60 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row60_col4" class="data row60 col4">0.003</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row60_col5" class="data row60 col5">1.19</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row60_col6" class="data row60 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row60_col7" class="data row60 col7">19.584250</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row60_col8" class="data row60 col8">0.140000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row60_col9" class="data row60 col9">0.09</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row61" class="row_heading level0 row61">61</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row61_col0" class="data row61 col0">WDAY</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row61_col1" class="data row61 col1">WORKDAY INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row61_col2" class="data row61 col2">Information Technology</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row61_col3" class="data row61 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row61_col4" class="data row61 col4">0.003</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row61_col5" class="data row61 col5">-3.10</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row61_col6" class="data row61 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row61_col7" class="data row61 col7">19.442890</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row61_col8" class="data row61 col8">0.140000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row61_col9" class="data row61 col9">0.10</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row62" class="row_heading level0 row62">62</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row62_col0" class="data row62 col0">MAR</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row62_col1" class="data row62 col1">MARRIOTT INTERNATIONAL INC/MD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row62_col2" class="data row62 col2">Consumer Discretionary</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row62_col3" class="data row62 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row62_col4" class="data row62 col4">0.003</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row62_col5" class="data row62 col5">1.13</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row62_col6" class="data row62 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row62_col7" class="data row62 col7">19.154280</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row62_col8" class="data row62 col8">0.140000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row62_col9" class="data row62 col9">0.05</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row63" class="row_heading level0 row63">63</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row63_col0" class="data row63 col0">ROST</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row63_col1" class="data row63 col1">ROSS STORES INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row63_col2" class="data row63 col2">Consumer Discretionary</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row63_col3" class="data row63 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row63_col4" class="data row63 col4">0.003</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row63_col5" class="data row63 col5">1.51</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row63_col6" class="data row63 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row63_col7" class="data row63 col7">19.042370</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row63_col8" class="data row63 col8">0.140000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row63_col9" class="data row63 col9">0.15</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row64" class="row_heading level0 row64">64</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row64_col0" class="data row64 col0">MTCH</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row64_col1" class="data row64 col1">MATCH GROUP INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row64_col2" class="data row64 col2">Communication Services</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row64_col3" class="data row64 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row64_col4" class="data row64 col4">0.003</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row64_col5" class="data row64 col5">-0.63</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row64_col6" class="data row64 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row64_col7" class="data row64 col7">18.777320</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row64_col8" class="data row64 col8">0.130000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row64_col9" class="data row64 col9">0.06</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row65" class="row_heading level0 row65">65</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row65_col0" class="data row65 col0">EXC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row65_col1" class="data row65 col1">EXELON CORP</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row65_col2" class="data row65 col2">Utilities</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row65_col3" class="data row65 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row65_col4" class="data row65 col4">0.003</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row65_col5" class="data row65 col5">-0.56</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row65_col6" class="data row65 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row65_col7" class="data row65 col7">18.659520</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row65_col8" class="data row65 col8">0.130000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row65_col9" class="data row65 col9">0.22</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row66" class="row_heading level0 row66">66</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row66_col0" class="data row66 col0">AEP</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row66_col1" class="data row66 col1">AMERICAN ELECTRIC POWER CO INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row66_col2" class="data row66 col2">Utilities</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row66_col3" class="data row66 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row66_col4" class="data row66 col4">0.003</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row66_col5" class="data row66 col5">0.79</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row66_col6" class="data row66 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row66_col7" class="data row66 col7">18.217770</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row66_col8" class="data row66 col8">0.130000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row66_col9" class="data row66 col9">0.24</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row67" class="row_heading level0 row67">67</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row67_col0" class="data row67 col0">SNPS</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row67_col1" class="data row67 col1">SYNOPSYS INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row67_col2" class="data row67 col2">Information Technology</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row67_col3" class="data row67 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row67_col4" class="data row67 col4">0.003</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row67_col5" class="data row67 col5">-0.14</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row67_col6" class="data row67 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row67_col7" class="data row67 col7">18.129420</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row67_col8" class="data row67 col8">0.130000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row67_col9" class="data row67 col9">0.19</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row68" class="row_heading level0 row68">68</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row68_col0" class="data row68 col0">DXCM</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row68_col1" class="data row68 col1">DEXCOM INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row68_col2" class="data row68 col2">Healthcare</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row68_col3" class="data row68 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row68_col4" class="data row68 col4">0.003</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row68_col5" class="data row68 col5">0.05</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row68_col6" class="data row68 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row68_col7" class="data row68 col7">17.793690</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row68_col8" class="data row68 col8">0.130000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row68_col9" class="data row68 col9">0.03</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row69" class="row_heading level0 row69">69</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row69_col0" class="data row69 col0">EA</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row69_col1" class="data row69 col1">ELECTRONIC ARTS INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row69_col2" class="data row69 col2">Communication Services</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row69_col3" class="data row69 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row69_col4" class="data row69 col4">0.003</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row69_col5" class="data row69 col5">-0.19</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row69_col6" class="data row69 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row69_col7" class="data row69 col7">17.734790</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row69_col8" class="data row69 col8">0.130000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row69_col9" class="data row69 col9">0.09</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row70" class="row_heading level0 row70">70</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row70_col0" class="data row70 col0">MCHP</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row70_col1" class="data row70 col1">MICROCHIP TECHNOLOGY INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row70_col2" class="data row70 col2">Information Technology</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row70_col3" class="data row70 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row70_col4" class="data row70 col4">0.003</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row70_col5" class="data row70 col5">-2.02</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row70_col6" class="data row70 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row70_col7" class="data row70 col7">17.646440</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row70_col8" class="data row70 col8">0.130000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row70_col9" class="data row70 col9">0.15</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row71" class="row_heading level0 row71">71</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row71_col0" class="data row71 col0">ALXN</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row71_col1" class="data row71 col1">ALEXION PHARMACEUTICALS INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row71_col2" class="data row71 col2">Healthcare</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row71_col3" class="data row71 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row71_col4" class="data row71 col4">0.003</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row71_col5" class="data row71 col5">-0.32</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row71_col6" class="data row71 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row71_col7" class="data row71 col7">17.493300</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row71_col8" class="data row71 col8">0.120000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row71_col9" class="data row71 col9">0.13</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row72" class="row_heading level0 row72">72</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row72_col0" class="data row72 col0">CTAS</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row72_col1" class="data row72 col1">CINTAS CORP</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row72_col2" class="data row72 col2">Industrials</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row72_col3" class="data row72 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row72_col4" class="data row72 col4">0.003</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row72_col5" class="data row72 col5">-0.14</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row72_col6" class="data row72 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row72_col7" class="data row72 col7">17.281260</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row72_col8" class="data row72 col8">0.120000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row72_col9" class="data row72 col9">0.30</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row73" class="row_heading level0 row73">73</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row73_col0" class="data row73 col0">ORLY</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row73_col1" class="data row73 col1">O'REILLY AUTOMOTIVE INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row73_col2" class="data row73 col2">Consumer Discretionary</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row73_col3" class="data row73 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row73_col4" class="data row73 col4">0.003</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row73_col5" class="data row73 col5">0.22</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row73_col6" class="data row73 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row73_col7" class="data row73 col7">17.022100</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row73_col8" class="data row73 col8">0.120000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row73_col9" class="data row73 col9">0.05</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row74" class="row_heading level0 row74">74</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row74_col0" class="data row74 col0">PAYX</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row74_col1" class="data row74 col1">PAYCHEX INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row74_col2" class="data row74 col2">Information Technology</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row74_col3" class="data row74 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row74_col4" class="data row74 col4">0.003</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row74_col5" class="data row74 col5">-0.22</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row74_col6" class="data row74 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row74_col7" class="data row74 col7">16.668700</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row74_col8" class="data row74 col8">0.120000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row74_col9" class="data row74 col9">0.21</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row75" class="row_heading level0 row75">75</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row75_col0" class="data row75 col0">CDNS</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row75_col1" class="data row75 col1">CADENCE DESIGN SYSTEMS INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row75_col2" class="data row75 col2">Information Technology</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row75_col3" class="data row75 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row75_col4" class="data row75 col4">0.003</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row75_col5" class="data row75 col5">-1.11</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row75_col6" class="data row75 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row75_col7" class="data row75 col7">16.403650</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row75_col8" class="data row75 col8">0.120000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row75_col9" class="data row75 col9">0.18</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row76" class="row_heading level0 row76">76</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row76_col0" class="data row76 col0">CTSH</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row76_col1" class="data row76 col1">COGNIZANT TECHNOLOGY SOLUTIONS</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row76_col2" class="data row76 col2">Information Technology</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row76_col3" class="data row76 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row76_col4" class="data row76 col4">0.003</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row76_col5" class="data row76 col5">-1.65</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row76_col6" class="data row76 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row76_col7" class="data row76 col7">15.738080</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row76_col8" class="data row76 col8">0.110000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row76_col9" class="data row76 col9">0.22</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row77" class="row_heading level0 row77">77</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row77_col0" class="data row77 col0">XLNX</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row77_col1" class="data row77 col1">XILINX INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row77_col2" class="data row77 col2">Information Technology</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row77_col3" class="data row77 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row77_col4" class="data row77 col4">0.003</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row77_col5" class="data row77 col5">3.63</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row77_col6" class="data row77 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row77_col7" class="data row77 col7">15.319890</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row77_col8" class="data row77 col8">0.110000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row77_col9" class="data row77 col9">0.14</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row78" class="row_heading level0 row78">78</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row78_col0" class="data row78 col0">XEL</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row78_col1" class="data row78 col1">XCEL ENERGY INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row78_col2" class="data row78 col2">Utilities</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row78_col3" class="data row78 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row78_col4" class="data row78 col4">0.003</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row78_col5" class="data row78 col5">0.26</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row78_col6" class="data row78 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row78_col7" class="data row78 col7">15.278660</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row78_col8" class="data row78 col8">0.110000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row78_col9" class="data row78 col9">0.18</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row79" class="row_heading level0 row79">79</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row79_col0" class="data row79 col0">TEAM</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row79_col1" class="data row79 col1">ATLASSIAN CORP PLC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row79_col2" class="data row79 col2">nan</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row79_col3" class="data row79 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row79_col4" class="data row79 col4">0.003</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row79_col5" class="data row79 col5">-2.76</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row79_col6" class="data row79 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row79_col7" class="data row79 col7">14.972380</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row79_col8" class="data row79 col8">0.110000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row79_col9" class="data row79 col9">0.11</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row80" class="row_heading level0 row80">80</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row80_col0" class="data row80 col0">NTES</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row80_col1" class="data row80 col1">NETEASE INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row80_col2" class="data row80 col2">Communication Services</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row80_col3" class="data row80 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row80_col4" class="data row80 col4">0.003</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row80_col5" class="data row80 col5">0.44</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row80_col6" class="data row80 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row80_col7" class="data row80 col7">14.960600</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row80_col8" class="data row80 col8">0.110000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row80_col9" class="data row80 col9">0.14</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row81" class="row_heading level0 row81">81</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row81_col0" class="data row81 col0">PTON</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row81_col1" class="data row81 col1">PELOTON INTERACTIVE INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row81_col2" class="data row81 col2">nan</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row81_col3" class="data row81 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row81_col4" class="data row81 col4">0.002</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row81_col5" class="data row81 col5">-1.32</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row81_col6" class="data row81 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row81_col7" class="data row81 col7">14.359820</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row81_col8" class="data row81 col8">0.100000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row81_col9" class="data row81 col9">0.01</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row82" class="row_heading level0 row82">82</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row82_col0" class="data row82 col0">SWKS</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row82_col1" class="data row82 col1">SKYWORKS SOLUTIONS INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row82_col2" class="data row82 col2">Information Technology</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row82_col3" class="data row82 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row82_col4" class="data row82 col4">0.002</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row82_col5" class="data row82 col5">0.42</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row82_col6" class="data row82 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row82_col7" class="data row82 col7">13.617680</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row82_col8" class="data row82 col8">0.100000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row82_col9" class="data row82 col9">0.08</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row83" class="row_heading level0 row83">83</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row83_col0" class="data row83 col0">CPRT</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row83_col1" class="data row83 col1">COPART INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row83_col2" class="data row83 col2">Industrials</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row83_col3" class="data row83 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row83_col4" class="data row83 col4">0.002</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row83_col5" class="data row83 col5">-1.11</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row83_col6" class="data row83 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row83_col7" class="data row83 col7">13.423310</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row83_col8" class="data row83 col8">0.100000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row83_col9" class="data row83 col9">0.13</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row84" class="row_heading level0 row84">84</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row84_col0" class="data row84 col0">PCAR</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row84_col1" class="data row84 col1">PACCAR INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row84_col2" class="data row84 col2">Industrials</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row84_col3" class="data row84 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row84_col4" class="data row84 col4">0.002</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row84_col5" class="data row84 col5">1.22</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row84_col6" class="data row84 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row84_col7" class="data row84 col7">13.340850</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row84_col8" class="data row84 col8">0.100000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row84_col9" class="data row84 col9">-0.01</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row85" class="row_heading level0 row85">85</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row85_col0" class="data row85 col0">OKTA</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row85_col1" class="data row85 col1">OKTA INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row85_col2" class="data row85 col2">Information Technology</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row85_col3" class="data row85 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row85_col4" class="data row85 col4">0.002</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row85_col5" class="data row85 col5">-1.35</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row85_col6" class="data row85 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row85_col7" class="data row85 col7">13.181820</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row85_col8" class="data row85 col8">0.090000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row85_col9" class="data row85 col9">-0.08</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row86" class="row_heading level0 row86">86</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row86_col0" class="data row86 col0">ANSS</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row86_col1" class="data row86 col1">ANSYS INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row86_col2" class="data row86 col2">Information Technology</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row86_col3" class="data row86 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row86_col4" class="data row86 col4">0.002</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row86_col5" class="data row86 col5">-1.55</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row86_col6" class="data row86 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row86_col7" class="data row86 col7">13.034570</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row86_col8" class="data row86 col8">0.090000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row86_col9" class="data row86 col9">0.12</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row87" class="row_heading level0 row87">87</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row87_col0" class="data row87 col0">FAST</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row87_col1" class="data row87 col1">FASTENAL CO</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row87_col2" class="data row87 col2">Industrials</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row87_col3" class="data row87 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row87_col4" class="data row87 col4">0.002</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row87_col5" class="data row87 col5">0.44</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row87_col6" class="data row87 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row87_col7" class="data row87 col7">12.863760</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row87_col8" class="data row87 col8">0.090000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row87_col9" class="data row87 col9">0.11</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row88" class="row_heading level0 row88">88</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row88_col0" class="data row88 col0">SGEN</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row88_col1" class="data row88 col1">SEAGEN INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row88_col2" class="data row88 col2">Healthcare</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row88_col3" class="data row88 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row88_col4" class="data row88 col4">0.002</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row88_col5" class="data row88 col5">-0.45</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row88_col6" class="data row88 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row88_col7" class="data row88 col7">12.345440</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row88_col8" class="data row88 col8">0.090000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row88_col9" class="data row88 col9">-0.12</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row89" class="row_heading level0 row89">89</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row89_col0" class="data row89 col0">VRSK</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row89_col1" class="data row89 col1">VERISK ANALYTICS INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row89_col2" class="data row89 col2">Industrials</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row89_col3" class="data row89 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row89_col4" class="data row89 col4">0.002</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row89_col5" class="data row89 col5">0.22</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row89_col6" class="data row89 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row89_col7" class="data row89 col7">12.204080</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row89_col8" class="data row89 col8">0.090000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row89_col9" class="data row89 col9">0.05</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row90" class="row_heading level0 row90">90</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row90_col0" class="data row90 col0">MXIM</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row90_col1" class="data row90 col1">MAXIM INTEGRATED PRODUCTS INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row90_col2" class="data row90 col2">Information Technology</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row90_col3" class="data row90 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row90_col4" class="data row90 col4">0.002</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row90_col5" class="data row90 col5">0.38</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row90_col6" class="data row90 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row90_col7" class="data row90 col7">12.162850</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row90_col8" class="data row90 col8">0.090000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row90_col9" class="data row90 col9">0.11</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row91" class="row_heading level0 row91">91</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row91_col0" class="data row91 col0">SIRI</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row91_col1" class="data row91 col1">SIRIUS XM HOLDINGS INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row91_col2" class="data row91 col2">Communication Services</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row91_col3" class="data row91 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row91_col4" class="data row91 col4">0.002</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row91_col5" class="data row91 col5">-0.15</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row91_col6" class="data row91 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row91_col7" class="data row91 col7">11.526730</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row91_col8" class="data row91 col8">0.080000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row91_col9" class="data row91 col9">0.16</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row92" class="row_heading level0 row92">92</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row92_col0" class="data row92 col0">VRSN</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row92_col1" class="data row92 col1">VERISIGN INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row92_col2" class="data row92 col2">Information Technology</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row92_col3" class="data row92 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row92_col4" class="data row92 col4">0.002</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row92_col5" class="data row92 col5">-0.91</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row92_col6" class="data row92 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row92_col7" class="data row92 col7">11.049640</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row92_col8" class="data row92 col8">0.080000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row92_col9" class="data row92 col9">0.16</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row93" class="row_heading level0 row93">93</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row93_col0" class="data row93 col0">CDW</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row93_col1" class="data row93 col1">CDW CORP/DE</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row93_col2" class="data row93 col2">Information Technology</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row93_col3" class="data row93 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row93_col4" class="data row93 col4">0.002</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row93_col5" class="data row93 col5">-0.95</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row93_col6" class="data row93 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row93_col7" class="data row93 col7">10.548990</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row93_col8" class="data row93 col8">0.080000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row93_col9" class="data row93 col9">0.23</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row94" class="row_heading level0 row94">94</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row94_col0" class="data row94 col0">SPLK</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row94_col1" class="data row94 col1">SPLUNK INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row94_col2" class="data row94 col2">Information Technology</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row94_col3" class="data row94 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row94_col4" class="data row94 col4">0.002</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row94_col5" class="data row94 col5">0.49</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row94_col6" class="data row94 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row94_col7" class="data row94 col7">10.213260</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row94_col8" class="data row94 col8">0.070000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row94_col9" class="data row94 col9">0.08</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row95" class="row_heading level0 row95">95</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row95_col0" class="data row95 col0">CERN</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row95_col1" class="data row95 col1">CERNER CORP</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row95_col2" class="data row95 col2">Healthcare</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row95_col3" class="data row95 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row95_col4" class="data row95 col4">0.002</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row95_col5" class="data row95 col5">-0.26</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row95_col6" class="data row95 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row95_col7" class="data row95 col7">10.148470</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row95_col8" class="data row95 col8">0.070000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row95_col9" class="data row95 col9">0.04</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row96" class="row_heading level0 row96">96</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row96_col0" class="data row96 col0">DLTR</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row96_col1" class="data row96 col1">DOLLAR TREE INC</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row96_col2" class="data row96 col2">Consumer Discretionary</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row96_col3" class="data row96 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row96_col4" class="data row96 col4">0.002</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row96_col5" class="data row96 col5">0.02</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row96_col6" class="data row96 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row96_col7" class="data row96 col7">9.942320</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row96_col8" class="data row96 col8">0.070000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row96_col9" class="data row96 col9">0.05</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row97" class="row_heading level0 row97">97</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row97_col0" class="data row97 col0">TCOM</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row97_col1" class="data row97 col1">TRIP.COM GROUP LTD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row97_col2" class="data row97 col2">Consumer Discretionary</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row97_col3" class="data row97 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row97_col4" class="data row97 col4">0.001</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row97_col5" class="data row97 col5">-0.14</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row97_col6" class="data row97 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row97_col7" class="data row97 col7">8.045740</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row97_col8" class="data row97 col8">0.060000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row97_col9" class="data row97 col9">0.15</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row98" class="row_heading level0 row98">98</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row98_col0" class="data row98 col0">INCY</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row98_col1" class="data row98 col1">INCYTE CORP</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row98_col2" class="data row98 col2">Healthcare</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row98_col3" class="data row98 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row98_col4" class="data row98 col4">0.001</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row98_col5" class="data row98 col5">-0.67</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row98_col6" class="data row98 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row98_col7" class="data row98 col7">7.969170</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row98_col8" class="data row98 col8">0.060000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row98_col9" class="data row98 col9">0.07</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row99" class="row_heading level0 row99">99</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row99_col0" class="data row99 col0">CHKP</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row99_col1" class="data row99 col1">CHECK POINT SOFTWARE TECHNOLOG</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row99_col2" class="data row99 col2">Information Technology</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row99_col3" class="data row99 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row99_col4" class="data row99 col4">0.001</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row99_col5" class="data row99 col5">-0.57</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row99_col6" class="data row99 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row99_col7" class="data row99 col7">6.767610</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row99_col8" class="data row99 col8">0.050000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row99_col9" class="data row99 col9">0.17</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row100" class="row_heading level0 row100">100</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row100_col0" class="data row100 col0">FOXA</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row100_col1" class="data row100 col1">FOX CORP</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row100_col2" class="data row100 col2">Communication Services</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row100_col3" class="data row100 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row100_col4" class="data row100 col4">0.001</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row100_col5" class="data row100 col5">0.81</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row100_col6" class="data row100 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row100_col7" class="data row100 col7">5.230320</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row100_col8" class="data row100 col8">0.040000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row100_col9" class="data row100 col9">0.12</td>
-            </tr>
-            <tr>
-                        <th id="T_77af5304_da4b_11eb_8f69_0242ac1c0002level0_row101" class="row_heading level0 row101">101</th>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row101_col0" class="data row101 col0">FOX</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row101_col1" class="data row101 col1">FOX CORP</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row101_col2" class="data row101 col2">Communication Services</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row101_col3" class="data row101 col3">USD</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row101_col4" class="data row101 col4">0.001</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row101_col5" class="data row101 col5">0.46</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row101_col6" class="data row101 col6">NDQ</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row101_col7" class="data row101 col7">3.840280</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row101_col8" class="data row101 col8">0.030000</td>
-                        <td id="T_77af5304_da4b_11eb_8f69_0242ac1c0002row101_col9" class="data row101 col9">0.12</td>
-            </tr>
-    </tbody></table>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="An-experimental-analysis-into-looking-at-financial-news-and-blog-headlines">An experimental analysis into looking at financial news and blog headlines<a class="anchor-link" href="#An-experimental-analysis-into-looking-at-financial-news-and-blog-headlines"> </a></h2>
 </div>
 </div>
 </div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>The median sentiment in the past 48 hours via news is: -0.103
-The median sentiment in the past 48 hours via blogs is: 0.089
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Observing-the-seasonality-of-the-NASDAQ">Observing the seasonality of the NASDAQ<a class="anchor-link" href="#Observing-the-seasonality-of-the-NASDAQ"> </a></h2>
@@ -1936,261 +232,261 @@ The median sentiment in the past 48 hours via blogs is: 0.089
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <style type="text/css">
-#T_78121f70_da4b_11eb_8f69_0242ac1c0002row0_col0,#T_78121f70_da4b_11eb_8f69_0242ac1c0002row4_col1,#T_78121f70_da4b_11eb_8f69_0242ac1c0002row6_col3,#T_78121f70_da4b_11eb_8f69_0242ac1c0002row9_col2,#T_78121f70_da4b_11eb_8f69_0242ac1c0002row11_col4{
+#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row0_col0,#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row4_col1,#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row6_col3,#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row9_col2,#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row11_col4{
             background-color:  #006837;
             color:  #f1f1f1;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row0_col1{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row0_col1{
             background-color:  #148e4b;
             color:  #000000;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row0_col2{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row0_col2{
             background-color:  #feda86;
             color:  #000000;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row0_col3{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row0_col3{
             background-color:  #0e8245;
             color:  #f1f1f1;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row0_col4{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row0_col4{
             background-color:  #fa9857;
             color:  #000000;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row1_col0{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row1_col0{
             background-color:  #feec9f;
             color:  #000000;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row1_col1{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row1_col1{
             background-color:  #f67a49;
             color:  #000000;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row1_col2,#T_78121f70_da4b_11eb_8f69_0242ac1c0002row6_col1{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row1_col2,#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row6_col1{
             background-color:  #dcf08f;
             color:  #000000;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row1_col3{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row1_col3{
             background-color:  #fb9d59;
             color:  #000000;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row1_col4{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row1_col4{
             background-color:  #9dd569;
             color:  #000000;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row2_col0{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row2_col0{
             background-color:  #fee18d;
             color:  #000000;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row2_col1,#T_78121f70_da4b_11eb_8f69_0242ac1c0002row10_col3{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row2_col1,#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row10_col3{
             background-color:  #fdb567;
             color:  #000000;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row2_col2{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row2_col2{
             background-color:  #b10b26;
             color:  #f1f1f1;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row2_col3{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row2_col3{
             background-color:  #82c966;
             color:  #000000;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row2_col4{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row2_col4{
             background-color:  #f36b42;
             color:  #000000;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row3_col0{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row3_col0{
             background-color:  #48ae5c;
             color:  #000000;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row3_col1{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row3_col1{
             background-color:  #fffcba;
             color:  #000000;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row3_col2{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row3_col2{
             background-color:  #fec877;
             color:  #000000;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row3_col3{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row3_col3{
             background-color:  #98d368;
             color:  #000000;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row3_col4{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row3_col4{
             background-color:  #7ac665;
             color:  #000000;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row4_col0{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row4_col0{
             background-color:  #b7e075;
             color:  #000000;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row4_col2{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row4_col2{
             background-color:  #ed5f3c;
             color:  #000000;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row4_col3{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row4_col3{
             background-color:  #84ca66;
             color:  #000000;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row4_col4{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row4_col4{
             background-color:  #b30d26;
             color:  #f1f1f1;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row5_col0{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row5_col0{
             background-color:  #f7fcb4;
             color:  #000000;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row5_col1{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row5_col1{
             background-color:  #ce2827;
             color:  #f1f1f1;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row5_col2,#T_78121f70_da4b_11eb_8f69_0242ac1c0002row6_col4,#T_78121f70_da4b_11eb_8f69_0242ac1c0002row8_col0,#T_78121f70_da4b_11eb_8f69_0242ac1c0002row8_col1,#T_78121f70_da4b_11eb_8f69_0242ac1c0002row9_col3{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row5_col2,#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row6_col4,#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row8_col0,#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row8_col1,#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row9_col3{
             background-color:  #a50026;
             color:  #f1f1f1;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row5_col3{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row5_col3{
             background-color:  #06733d;
             color:  #f1f1f1;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row5_col4{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row5_col4{
             background-color:  #fdbd6d;
             color:  #000000;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row6_col0{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row6_col0{
             background-color:  #feffbe;
             color:  #000000;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row6_col2{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row6_col2{
             background-color:  #ca2427;
             color:  #f1f1f1;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row7_col0,#T_78121f70_da4b_11eb_8f69_0242ac1c0002row9_col4{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row7_col0,#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row9_col4{
             background-color:  #f98e52;
             color:  #000000;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row7_col1{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row7_col1{
             background-color:  #fecc7b;
             color:  #000000;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row7_col2{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row7_col2{
             background-color:  #feeda1;
             color:  #000000;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row7_col3{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row7_col3{
             background-color:  #fee491;
             color:  #000000;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row7_col4{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row7_col4{
             background-color:  #dc3b2c;
             color:  #f1f1f1;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row8_col2{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row8_col2{
             background-color:  #fbfdba;
             color:  #000000;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row8_col3{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row8_col3{
             background-color:  #e3f399;
             color:  #000000;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row8_col4{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row8_col4{
             background-color:  #e75337;
             color:  #000000;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row9_col0{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row9_col0{
             background-color:  #fff2aa;
             color:  #000000;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row9_col1{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row9_col1{
             background-color:  #1b9950;
             color:  #000000;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row10_col0{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row10_col0{
             background-color:  #2da155;
             color:  #000000;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row10_col1{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row10_col1{
             background-color:  #daf08d;
             color:  #000000;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row10_col2{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row10_col2{
             background-color:  #d7ee8a;
             color:  #000000;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row10_col4{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row10_col4{
             background-color:  #f8864f;
             color:  #000000;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row11_col0{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row11_col0{
             background-color:  #42ac5a;
             color:  #000000;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row11_col1{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row11_col1{
             background-color:  #fece7c;
             color:  #000000;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row11_col2{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row11_col2{
             background-color:  #fdc776;
             color:  #000000;
-        }#T_78121f70_da4b_11eb_8f69_0242ac1c0002row11_col3{
+        }#T_09096a1e_da4d_11eb_8f69_0242ac1c0002row11_col3{
             background-color:  #36a657;
             color:  #000000;
-        }</style><table id="T_78121f70_da4b_11eb_8f69_0242ac1c0002"><thead>    <tr>        <th class="blank level0"></th>        <th class="col_heading level0 col0">Average Return (%)</th>        <th class="col_heading level0 col1">Median Return (%)</th>        <th class="col_heading level0 col2">Standard Deviation (%)</th>        <th class="col_heading level0 col3">Minimum Return (%)</th>        <th class="col_heading level0 col4">Maximum Return (%)</th>        <th class="col_heading level0 col5">Number of Observations</th>    </tr>    <tr>        <th class="index_name level0">Month</th>        <th class="blank"></th>        <th class="blank"></th>        <th class="blank"></th>        <th class="blank"></th>        <th class="blank"></th>        <th class="blank"></th>    </tr></thead><tbody>
+        }</style><table id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002"><thead>    <tr>        <th class="blank level0"></th>        <th class="col_heading level0 col0">Average Return (%)</th>        <th class="col_heading level0 col1">Median Return (%)</th>        <th class="col_heading level0 col2">Standard Deviation (%)</th>        <th class="col_heading level0 col3">Minimum Return (%)</th>        <th class="col_heading level0 col4">Maximum Return (%)</th>        <th class="col_heading level0 col5">Number of Observations</th>    </tr></thead><tbody>
                 <tr>
-                        <th id="T_78121f70_da4b_11eb_8f69_0242ac1c0002level0_row0" class="row_heading level0 row0">January</th>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row0_col0" class="data row0 col0">2.23%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row0_col1" class="data row0 col1">2.74%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row0_col2" class="data row0 col2">6.18%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row0_col3" class="data row0 col3">-9.95%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row0_col4" class="data row0 col4">13.52%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row0_col5" class="data row0 col5">37</td>
+                        <th id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002level0_row0" class="row_heading level0 row0">January</th>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row0_col0" class="data row0 col0">2.23%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row0_col1" class="data row0 col1">2.74%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row0_col2" class="data row0 col2">6.18%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row0_col3" class="data row0 col3">-9.95%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row0_col4" class="data row0 col4">13.52%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row0_col5" class="data row0 col5">37</td>
             </tr>
             <tr>
-                        <th id="T_78121f70_da4b_11eb_8f69_0242ac1c0002level0_row1" class="row_heading level0 row1">February</th>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row1_col0" class="data row1 col0">0.66%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row1_col1" class="data row1 col1">0.96%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row1_col2" class="data row1 col2">6.81%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row1_col3" class="data row1 col3">-22.36%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row1_col4" class="data row1 col4">18.57%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row1_col5" class="data row1 col5">37</td>
+                        <th id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002level0_row1" class="row_heading level0 row1">February</th>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row1_col0" class="data row1 col0">0.66%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row1_col1" class="data row1 col1">0.96%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row1_col2" class="data row1 col2">6.81%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row1_col3" class="data row1 col3">-22.36%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row1_col4" class="data row1 col4">18.57%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row1_col5" class="data row1 col5">37</td>
             </tr>
             <tr>
-                        <th id="T_78121f70_da4b_11eb_8f69_0242ac1c0002level0_row2" class="row_heading level0 row2">March</th>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row2_col0" class="data row2 col0">0.56%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row2_col1" class="data row2 col1">1.20%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row2_col2" class="data row2 col2">5.06%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row2_col3" class="data row2 col3">-13.45%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row2_col4" class="data row2 col4">12.72%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row2_col5" class="data row2 col5">37</td>
+                        <th id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002level0_row2" class="row_heading level0 row2">March</th>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row2_col0" class="data row2 col0">0.56%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row2_col1" class="data row2 col1">1.20%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row2_col2" class="data row2 col2">5.06%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row2_col3" class="data row2 col3">-13.45%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row2_col4" class="data row2 col4">12.72%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row2_col5" class="data row2 col5">37</td>
             </tr>
             <tr>
-                        <th id="T_78121f70_da4b_11eb_8f69_0242ac1c0002level0_row3" class="row_heading level0 row3">April</th>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row3_col0" class="data row3 col0">1.77%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row3_col1" class="data row3 col1">1.65%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row3_col2" class="data row3 col2">6.07%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row3_col3" class="data row3 col3">-14.11%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row3_col4" class="data row3 col4">19.17%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row3_col5" class="data row3 col5">37</td>
+                        <th id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002level0_row3" class="row_heading level0 row3">April</th>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row3_col0" class="data row3 col0">1.77%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row3_col1" class="data row3 col1">1.65%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row3_col2" class="data row3 col2">6.07%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row3_col3" class="data row3 col3">-14.11%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row3_col4" class="data row3 col4">19.17%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row3_col5" class="data row3 col5">37</td>
             </tr>
             <tr>
-                        <th id="T_78121f70_da4b_11eb_8f69_0242ac1c0002level0_row4" class="row_heading level0 row4">May</th>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row4_col0" class="data row4 col0">1.29%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row4_col1" class="data row4 col1">2.94%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row4_col2" class="data row4 col2">5.53%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row4_col3" class="data row4 col3">-13.47%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row4_col4" class="data row4 col4">10.79%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row4_col5" class="data row4 col5">37</td>
+                        <th id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002level0_row4" class="row_heading level0 row4">May</th>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row4_col0" class="data row4 col0">1.29%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row4_col1" class="data row4 col1">2.94%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row4_col2" class="data row4 col2">5.53%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row4_col3" class="data row4 col3">-13.47%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row4_col4" class="data row4 col4">10.79%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row4_col5" class="data row4 col5">37</td>
             </tr>
             <tr>
-                        <th id="T_78121f70_da4b_11eb_8f69_0242ac1c0002level0_row5" class="row_heading level0 row5">June</th>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row5_col0" class="data row5 col0">0.89%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row5_col1" class="data row5 col1">0.61%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row5_col2" class="data row5 col2">4.98%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row5_col3" class="data row5 col3">-9.31%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row5_col4" class="data row5 col4">14.23%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row5_col5" class="data row5 col5">37</td>
+                        <th id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002level0_row5" class="row_heading level0 row5">June</th>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row5_col0" class="data row5 col0">0.89%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row5_col1" class="data row5 col1">0.61%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row5_col2" class="data row5 col2">4.98%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row5_col3" class="data row5 col3">-9.31%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row5_col4" class="data row5 col4">14.23%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row5_col5" class="data row5 col5">37</td>
             </tr>
             <tr>
-                        <th id="T_78121f70_da4b_11eb_8f69_0242ac1c0002level0_row6" class="row_heading level0 row6">July</th>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row6_col0" class="data row6 col0">0.83%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row6_col1" class="data row6 col1">1.90%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row6_col2" class="data row6 col2">5.22%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row6_col3" class="data row6 col3">-8.86%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row6_col4" class="data row6 col4">10.48%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row6_col5" class="data row6 col5">36</td>
+                        <th id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002level0_row6" class="row_heading level0 row6">July</th>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row6_col0" class="data row6 col0">0.83%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row6_col1" class="data row6 col1">1.90%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row6_col2" class="data row6 col2">5.22%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row6_col3" class="data row6 col3">-8.86%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row6_col4" class="data row6 col4">10.48%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row6_col5" class="data row6 col5">36</td>
             </tr>
             <tr>
-                        <th id="T_78121f70_da4b_11eb_8f69_0242ac1c0002level0_row7" class="row_heading level0 row7">August</th>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row7_col0" class="data row7 col0">0.13%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row7_col1" class="data row7 col1">1.32%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row7_col2" class="data row7 col2">6.35%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row7_col3" class="data row7 col3">-19.81%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row7_col4" class="data row7 col4">11.84%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row7_col5" class="data row7 col5">36</td>
+                        <th id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002level0_row7" class="row_heading level0 row7">August</th>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row7_col0" class="data row7 col0">0.13%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row7_col1" class="data row7 col1">1.32%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row7_col2" class="data row7 col2">6.35%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row7_col3" class="data row7 col3">-19.81%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row7_col4" class="data row7 col4">11.84%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row7_col5" class="data row7 col5">36</td>
             </tr>
             <tr>
-                        <th id="T_78121f70_da4b_11eb_8f69_0242ac1c0002level0_row8" class="row_heading level0 row8">September</th>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row8_col0" class="data row8 col0">-0.58%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row8_col1" class="data row8 col1">0.40%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row8_col2" class="data row8 col2">6.55%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row8_col3" class="data row8 col3">-16.84%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row8_col4" class="data row8 col4">12.25%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row8_col5" class="data row8 col5">36</td>
+                        <th id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002level0_row8" class="row_heading level0 row8">September</th>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row8_col0" class="data row8 col0">-0.58%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row8_col1" class="data row8 col1">0.40%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row8_col2" class="data row8 col2">6.55%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row8_col3" class="data row8 col3">-16.84%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row8_col4" class="data row8 col4">12.25%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row8_col5" class="data row8 col5">36</td>
             </tr>
             <tr>
-                        <th id="T_78121f70_da4b_11eb_8f69_0242ac1c0002level0_row9" class="row_heading level0 row9">October</th>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row9_col0" class="data row9 col0">0.71%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row9_col1" class="data row9 col1">2.68%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row9_col2" class="data row9 col2">8.07%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row9_col3" class="data row9 col3">-27.54%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row9_col4" class="data row9 col4">13.33%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row9_col5" class="data row9 col5">36</td>
+                        <th id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002level0_row9" class="row_heading level0 row9">October</th>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row9_col0" class="data row9 col0">0.71%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row9_col1" class="data row9 col1">2.68%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row9_col2" class="data row9 col2">8.07%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row9_col3" class="data row9 col3">-27.54%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row9_col4" class="data row9 col4">13.33%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row9_col5" class="data row9 col5">36</td>
             </tr>
             <tr>
-                        <th id="T_78121f70_da4b_11eb_8f69_0242ac1c0002level0_row10" class="row_heading level0 row10">November</th>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row10_col0" class="data row10 col0">1.87%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row10_col1" class="data row10 col1">1.91%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row10_col2" class="data row10 col2">6.84%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row10_col3" class="data row10 col3">-21.67%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row10_col4" class="data row10 col4">13.20%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row10_col5" class="data row10 col5">36</td>
+                        <th id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002level0_row10" class="row_heading level0 row10">November</th>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row10_col0" class="data row10 col0">1.87%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row10_col1" class="data row10 col1">1.91%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row10_col2" class="data row10 col2">6.84%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row10_col3" class="data row10 col3">-21.67%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row10_col4" class="data row10 col4">13.20%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row10_col5" class="data row10 col5">36</td>
             </tr>
             <tr>
-                        <th id="T_78121f70_da4b_11eb_8f69_0242ac1c0002level0_row11" class="row_heading level0 row11">December</th>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row11_col0" class="data row11 col0">1.80%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row11_col1" class="data row11 col1">1.33%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row11_col2" class="data row11 col2">6.06%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row11_col3" class="data row11 col3">-11.43%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row11_col4" class="data row11 col4">21.80%</td>
-                        <td id="T_78121f70_da4b_11eb_8f69_0242ac1c0002row11_col5" class="data row11 col5">36</td>
+                        <th id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002level0_row11" class="row_heading level0 row11">December</th>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row11_col0" class="data row11 col0">1.80%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row11_col1" class="data row11 col1">1.33%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row11_col2" class="data row11 col2">6.06%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row11_col3" class="data row11 col3">-11.43%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row11_col4" class="data row11 col4">21.80%</td>
+                        <td id="T_09096a1e_da4d_11eb_8f69_0242ac1c0002row11_col5" class="data row11 col5">36</td>
             </tr>
     </tbody></table>
 </div>
