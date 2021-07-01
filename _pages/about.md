@@ -4,8 +4,5 @@ title: About Me
 permalink: /about/
 ---
 
-This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
+Hey! If you're looking to get to know me, send me a message on [linkedin](https://www.linkedin.com/in/harri-somakanthan/). 
 
-
-
-[^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats.
