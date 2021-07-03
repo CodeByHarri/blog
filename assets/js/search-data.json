@@ -3,9 +3,9 @@
     
         "post0": {
             "title": "Observing Returns In Cryptocurrencies",
-            "content": "No handles with labels found to put in legend. . No handles with labels found to put in legend. .",
-            "url": "https://codebyharri.github.io/blog/finance/2021/07/04/Observing-Returns-In-Cryptocurrencies.html",
-            "relUrl": "/finance/2021/07/04/Observing-Returns-In-Cryptocurrencies.html",
+            "content": "The following plot shows the return on investment (ROI) if you had invested in a cryptocurrency X days ago. For example investing 1500 days ago in BTC would have yielded a ~1000% ROI. The idea of this illustration was to show how long you would have to wait until ROIs are positive. . Similarly to the previous plot, the following plot shows the ROI if you had invested 1, 2 and 3 years ago to that date. For example the ROI of BTC on January 1st 2020 would have been 100% if you had deployed capital 1 year ago and almost -90% if you had deployed capital 2 years ago. The idea of this illustration is show that ROIs over 3 years tend to be more positive. This also highlights the importance of dollar cost averaging over lump sum investments. . In the following plots we obeserve Bitcoin dominance and Altseasons. A rudimentary visualisation to look at breaking out of trends/consolidation periods as well as observing patterns of higher highs and lower lows to trade between. The green and red band is a support band I like to use. It is compromised of the 12 and 26 day exponential moving average cross overs to highlight bull and bear trends on a smaller investment timeframe. The idea of this visualisation is to show the importance of portfolio management during times of volailty as Altcoins tend to bleed harder when BTC drops below its 21 week moving average. .",
+            "url": "https://codebyharri.github.io/blog/blockchain/2021/07/04/Observing-Returns-In-Cryptocurrencies.html",
+            "relUrl": "/blockchain/2021/07/04/Observing-Returns-In-Cryptocurrencies.html",
             "date": " • Jul 4, 2021"
         }
         
