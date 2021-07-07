@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Crypto Risk Metric",
-            "content": "Last Updated: 13/06/2021 . Simply put this tool is used to dynamically dollar cost average your purchases of a crypto. The risk metric is calculated using some stacked machine learning methods featured on my github. The risk is associated with how much you should be allocating. . BTC Risk Metric . How is the risk calculated? . Given the BTCUSD data from Yahoo Finance 8 features are created, listed belowed in the diagram. These 8 features are used to predict the normalised price between local highs and lows. The models used are sklearns Extra Trees, Random Forrest and Linear Regression. This process is optimised using Optuna. . .",
+            "content": "Last Updated: 07/07/2021 . Simply put this tool is used to dynamically dollar cost average your purchases of a crypto. The risk metric is calculated using some stacked machine learning methods featured on my github. The risk is associated with how much you should be allocating. . BTC Risk Metric . How is the risk calculated? . Given the BTCUSD data from Yahoo Finance 8 features are created, listed belowed in the diagram. These 8 features are used to predict the normalised price between local highs and lows. The models used are sklearns Extra Trees, Random Forrest and Linear Regression. This process is optimised using Optuna. . .",
             "url": "https://codebyharri.github.io/blog/blockchain/2021/07/12/Crypto-Risk-Metric.html",
             "relUrl": "/blockchain/2021/07/12/Crypto-Risk-Metric.html",
             "date": " • Jul 12, 2021"
