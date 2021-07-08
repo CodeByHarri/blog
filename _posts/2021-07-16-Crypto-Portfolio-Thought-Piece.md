@@ -15,7 +15,7 @@ In this markdown I wanted to track two different portfolios. A high risk portfol
 The **HIGH-RISK-HIGH-REWARD** (HRHR) portfolio contains 6 cryptocurrencies I've personally researched and look to have promising value additions in the space (NOT FINANCIAL ADVICE). The index equally splits the capital between the 6 cryptocurrencies and redistribute every 6 months on the 1st of January and 1st of July. The **GIANT-CAP** portfolio contains 20% Bitcoin, 40% Ethereum and 40% Cardano as a benchmark to compare the returns of the HRHR portfolio. The same redistribution logic applies to this portfolio on the same dates.  
 
 ## Risk
-My hypothesis is over a span of 5-10 years the HRHR, portfolio will show signficantly better risk adjusted returns than the GIANT-CAP portfolio. 
+My hypothesis is over a span of 5-10 years the HRHR, portfolio will show signficantly better risk adjusted returns than the GIANT-CAP portfolio. This blog post will be updated at least once a month to show the progress. 
 
 
 ## **HIGH-RISK-HIGH-REWARD**
