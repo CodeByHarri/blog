@@ -19,7 +19,7 @@ My hypothesis is over a span of 5-10 years the HRHR, portfolio will show signfic
 
 
 ## **HIGH-RISK-HIGH-REWARD**
-[HRHR](images/HRHR.png)
+![HRHR](images/HRHR.png)
 
 ## **GIANT-CAP**
-[GC](images/GC.png)
+![GC](images/GC.png)
