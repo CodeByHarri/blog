@@ -2,6 +2,17 @@
   
     
         "post0": {
+            "title": "Volume Profile Visible Range",
+            "content": "BTC-USD | % distance from strongest support: -31.07 ETH-USD | % distance from strongest support: -53.0 ADA-USD | % distance from strongest support: -53.22 SOL1-USD | % distance from strongest support: -79.43 MATIC-USD | % distance from strongest support: 7.13 LINK-USD | % distance from strongest support: -25.2 . DAG-USDT | % distance from strongest support: -41.89 LTX-USDT | % distance from strongest support: -80.92 COTI-USDT | % distance from strongest support: -63.03 UTK-BTC | % distance from strongest support: 42.95 OCEAN-BTC | % distance from strongest support: 33.64 ORN-USDT | % distance from strongest support: -13.3 ALEPH-USDT | % distance from strongest support: -19.41 CHR-USDT | % distance from strongest support: -16.75 NOIA-USDT | % distance from strongest support: -31.8 ALBT-USDT | % distance from strongest support: -47.58 UOS-USDT | % distance from strongest support: -44.41 CGG-USDT | % distance from strongest support: -73.92 AVA-USDT | % distance from strongest support: -51.54 SOUL-USDT | % distance from strongest support: -42.86 GOVI-USDT | % distance from strongest support: 74.79 .",
+            "url": "https://codebyharri.github.io/blog/finance/blockchain/2021/09/06/_08_06_Volume_Profile_Visible_Range.html",
+            "relUrl": "/finance/blockchain/2021/09/06/_08_06_Volume_Profile_Visible_Range.html",
+            "date": " • Sep 6, 2021"
+        }
+        
+    
+  
+    
+        ,"post1": {
             "title": "Crypto Portfolio Thought Piece",
             "content": ". Roses are red, violets are blue. This is not financial advice, I genuinely have no clue. Problem Statement . In this markdown I wanted to track two different portfolios. A high risk portfolio of low marketcap cryptocurrencies which I’ve curated based on some fundamental analysis and a large market capital portfolio consisting of Bitcoin, Ethereum and Cardano. The goal of this post is to show the returns of $1000 USD in both portfolios starting the 1st of July 2021. The reason I have not back dated the portfolios to showcase past performance is because ‘would have, should have’. . Methadology . The HIGH-RISK-HIGH-REWARD (HRHR) portfolio contains 6 cryptocurrencies I’ve personally researched and look to have promising value additions in the space (NOT FINANCIAL ADVICE). The index equally splits the capital between the 6 cryptocurrencies and redistribute every 6 months on the 1st of January and 1st of July. The GIANT-CAP portfolio contains 20% Bitcoin, 40% Ethereum and 40% Cardano as a benchmark to compare the returns of the HRHR portfolio. The same redistribution logic applies to this portfolio on the same dates. . Risk . My hypothesis is over a span of 5-10 years the HRHR, portfolio will show signficantly better risk adjusted returns than the GIANT-CAP portfolio. This blog post will be updated at least once a month to show the progress. . HIGH-RISK-HIGH-REWARD . . GIANT-CAP . .",
             "url": "https://codebyharri.github.io/blog/blockchain/2021/07/16/Crypto-Portfolio-Thought-Piece.html",
@@ -12,7 +23,7 @@
     
   
     
-        ,"post1": {
+        ,"post2": {
             "title": "Crypto Risk Metric",
             "content": "Last Updated: 07/07/2021 . Simply put this tool is used to dynamically dollar cost average your purchases of a crypto. The risk metric is calculated using some stacked machine learning methods featured on my github. The risk is associated with how much you should be allocating. . BTC Risk Metric . How is the risk calculated? . Given the BTCUSD data from Yahoo Finance 8 features are created, listed belowed in the diagram. These 8 features are used to predict the normalised price between local highs and lows. The models used are sklearns Extra Trees, Random Forrest and Linear Regression. This process is optimised using Optuna. . .",
             "url": "https://codebyharri.github.io/blog/blockchain/2021/07/12/Crypto-Risk-Metric.html",
@@ -23,7 +34,7 @@
     
   
     
-        ,"post2": {
+        ,"post3": {
             "title": "Dollar Cost Averaging vs Lump Sum Purchases",
             "content": "The idea behind this notebook is to showcase two strategies of investing into an asset. As an example we&#39;ll invest 10,000 AUD into the ASX top 200 (ASX:IOZ), the NASDAQ 100 (ASX:NDQ), Bitcoin and Ethereum. In the below diagram of ASX:IOZ, the first plot shows the price of IOZ over the past 4 years. The plot below shows the lump sum return on investment in blue. As an example, if you had invested 10,000 AUD on 01-01-2021 you would currently have ~11000 AUD today if you had made a lump sum purchase. The red line shows the return on investment if you had purchased 833.33 AUD every 30 days until you spent your 10,000 AUD capital. As an example, if you had invested your first 833.33 AUD on 01-01-2021, you would have ~10,400 AUD today. .",
             "url": "https://codebyharri.github.io/blog/finance/2021/07/08/Dollar-Cost-Averaging-vs-Lump-Sum-Purchases.html",
@@ -34,7 +45,7 @@
     
   
     
-        ,"post3": {
+        ,"post4": {
             "title": "Observing Returns In Cryptocurrencies",
             "content": "The following plot shows the return on investment (ROI) if you had invested in a cryptocurrency X days ago. For example investing 1500 days ago in BTC would have yielded a ~1000% ROI. The idea of this illustration was to show how long you would have to wait until ROIs are positive. . Similarly to the previous plot, the following plot shows the ROI if you had invested 1, 2 and 3 years ago to that date. For example the ROI of BTC on January 1st 2020 would have been 100% if you had deployed capital 1 year ago and almost -90% if you had deployed capital 2 years ago. The idea of this illustration is show that ROIs over 3 years tend to be more positive. This also highlights the importance of dollar cost averaging over lump sum investments. . In the following plots we obeserve Bitcoin dominance and Altseasons. A rudimentary visualisation to look at breaking out of trends/consolidation periods as well as observing patterns of higher highs and lower lows to trade between. The green and red band is a support band I like to use. It is compromised of the 12 and 26 day exponential moving average cross overs to highlight bull and bear trends on a smaller investment timeframe. The idea of this visualisation is to show the importance of portfolio management during times of volailty as Altcoins tend to bleed harder when BTC drops below its 21 week moving average. .",
             "url": "https://codebyharri.github.io/blog/blockchain/2021/07/04/Observing-Returns-In-Cryptocurrencies.html",
@@ -45,7 +56,7 @@
     
   
     
-        ,"post4": {
+        ,"post5": {
             "title": "My ETF Portfolio Holdings",
             "content": "In this notebook I wanted to visualy display 3 ETFs I own and thier underlying holdings. The 3 ETFS include the NASDAQ 100 (ASX:NDQ), Asian technology tigers (ASX:ASIA) and a clean energy index (ASX:CLNE). The colour shows the percentage change of my portfolio. . . . Observing the seasonality of the NASDAQ . Average Return (%) Median Return (%) Standard Deviation (%) Minimum Return (%) Maximum Return (%) Number of Observations . January 2.23% | 2.74% | 6.18% | -9.95% | 13.52% | 37 | . February 0.66% | 0.96% | 6.81% | -22.36% | 18.57% | 37 | . March 0.56% | 1.20% | 5.06% | -13.45% | 12.72% | 37 | . April 1.77% | 1.65% | 6.07% | -14.11% | 19.17% | 37 | . May 1.29% | 2.94% | 5.53% | -13.47% | 10.79% | 37 | . June 0.89% | 0.61% | 4.98% | -9.31% | 14.23% | 37 | . July 0.81% | 1.11% | 5.08% | -8.86% | 10.48% | 38 | . August 0.13% | 1.32% | 6.35% | -19.81% | 11.84% | 36 | . September -0.58% | 0.40% | 6.55% | -16.84% | 12.25% | 36 | . October 0.71% | 2.68% | 8.07% | -27.54% | 13.33% | 36 | . November 1.87% | 1.91% | 6.84% | -21.67% | 13.20% | 36 | . December 1.80% | 1.33% | 6.06% | -11.43% | 21.80% | 36 | .",
             "url": "https://codebyharri.github.io/blog/finance/2021/07/01/My-ETF-Portfolio-Holdings.html",
