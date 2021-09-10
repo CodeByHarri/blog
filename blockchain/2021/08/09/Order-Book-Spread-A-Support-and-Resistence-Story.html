@@ -4,19 +4,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Title | CodeByHarri</title>
+<title>Order Book Spread, A Support and Resistence Story | CodeByHarri</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Title" />
+<meta property="og:title" content="Order Book Spread, A Support and Resistence Story" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Cyber Security, Finance and Blockchain" />
-<meta property="og:description" content="Cyber Security, Finance and Blockchain" />
-<link rel="canonical" href="https://codebyharri.github.io/blog/2021/08/09/Order-Book-Spread-A-Support-and-Resistence-Story.html" />
-<meta property="og:url" content="https://codebyharri.github.io/blog/2021/08/09/Order-Book-Spread-A-Support-and-Resistence-Story.html" />
+<meta name="description" content="Can the order book tell us future entry/exit points?" />
+<meta property="og:description" content="Can the order book tell us future entry/exit points?" />
+<link rel="canonical" href="https://codebyharri.github.io/blog/blockchain/2021/08/09/Order-Book-Spread-A-Support-and-Resistence-Story.html" />
+<meta property="og:url" content="https://codebyharri.github.io/blog/blockchain/2021/08/09/Order-Book-Spread-A-Support-and-Resistence-Story.html" />
 <meta property="og:site_name" content="CodeByHarri" />
+<meta property="og:image" content="https://codebyharri.github.io/blog/images/chart-preview.png" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-08-09T00:00:00-05:00" />
 <script type="application/ld+json">
-{"url":"https://codebyharri.github.io/blog/2021/08/09/Order-Book-Spread-A-Support-and-Resistence-Story.html","@type":"BlogPosting","headline":"Title","dateModified":"2021-08-09T00:00:00-05:00","datePublished":"2021-08-09T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://codebyharri.github.io/blog/2021/08/09/Order-Book-Spread-A-Support-and-Resistence-Story.html"},"description":"Cyber Security, Finance and Blockchain","@context":"https://schema.org"}</script>
+{"url":"https://codebyharri.github.io/blog/blockchain/2021/08/09/Order-Book-Spread-A-Support-and-Resistence-Story.html","@type":"BlogPosting","headline":"Order Book Spread, A Support and Resistence Story","dateModified":"2021-08-09T00:00:00-05:00","datePublished":"2021-08-09T00:00:00-05:00","image":"https://codebyharri.github.io/blog/images/chart-preview.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://codebyharri.github.io/blog/blockchain/2021/08/09/Order-Book-Spread-A-Support-and-Resistence-Story.html"},"description":"Can the order book tell us future entry/exit points?","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://codebyharri.github.io/blog/feed.xml" title="CodeByHarri" /><!-- the google_analytics_id gets auto inserted from the config file -->
 
@@ -87,7 +88,7 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Title</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-08-09T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Order Book Spread, A Support and Resistence Story</h1><p class="page-description">Can the order book tell us future entry/exit points?</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-08-09T00:00:00-05:00" itemprop="datePublished">
         Aug 9, 2021
       </time>
        • <span class="read-time" title="Estimated read time">
@@ -98,14 +99,15 @@ window.onload = wrap_img;
 </span></p>
 
     
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/blog/categories/#Blockchain">Blockchain</a>
+        
+      
+      </p>
+    
 
     
-      
-        <div class="pb-5 d-flex flex-wrap flex-justify-end">
-          
-          
-          
-        </div>
       </header>
 
   <div class="post-content e-content" itemprop="articleBody">
@@ -118,36 +120,6 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="https://colab.research.google.com/github/CodeByHarri/blog/blob/master/_notebooks/2021-08-09-Order-Book-Spread-A-Support-and-Resistence-Story.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" /></a></p>
-
-</div>
-</div>
-</div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="o">&gt;</span> <span class="n">Can</span> <span class="n">the</span> <span class="n">order</span> <span class="n">book</span> <span class="n">tell</span> <span class="n">us</span> <span class="n">future</span> <span class="n">entry</span><span class="o">/</span><span class="n">exit</span> <span class="n">points</span><span class="err">?</span>
-
-<span class="o">-</span> <span class="n">toc</span><span class="p">:</span> <span class="n">false</span>
-<span class="o">-</span> <span class="n">badges</span><span class="p">:</span> <span class="n">false</span>
-<span class="o">-</span> <span class="n">comments</span><span class="p">:</span> <span class="n">true</span>
-<span class="o">-</span> <span class="n">categories</span><span class="p">:</span> <span class="p">[</span><span class="n">Blockchain</span><span class="p">]</span>
-<span class="o">-</span> <span class="n">image</span><span class="p">:</span> <span class="n">images</span><span class="o">/</span><span class="n">chart</span><span class="o">-</span><span class="n">preview</span><span class="o">.</span><span class="n">png</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><div class="Toast Toast--warning googoo">
@@ -301,7 +273,15 @@ window.onload = wrap_img;
 
 
 
-  </div><a class="u-url" href="/blog/2021/08/09/Order-Book-Spread-A-Support-and-Resistence-Story.html" hidden></a>
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="CodeByHarri/blog"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/blog/blockchain/2021/08/09/Order-Book-Spread-A-Support-and-Resistence-Story.html" hidden></a>
 </article>
       </div>
     </main><footer class="site-footer h-card">
